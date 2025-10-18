@@ -319,3 +319,27 @@ const icon = this.props.active
 />
 
 ```
+
+
+14. Image Background
+
+```jsx
+<ImageBackground source={...} style={{width: '100%', height: '100%'}}>
+    <Text>Inside</Text>
+</ImageBackground>
+```
+
+15. How to handle the touch
+
+```jsx
+    <Button onPress={onPress} title="This looks great!" />
+    <Button onPress={onPress} title="OK!" color="#841584" />
+```
+16. Touch able opacity
+```jsx
+  <TouchableOpacity onPress={onPressButton}>
+        <View style={styles.button}>
+          <Text style={styles.buttonText}>TouchableOpacity</Text>
+        </View>
+      </TouchableOpacity>
+```
