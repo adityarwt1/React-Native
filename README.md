@@ -335,3 +335,70 @@ const icon = this.props.active
     <Button onPress={onPress} title="This looks great!" />
     <Button onPress={onPress} title="OK!" color="#841584" />
 ```
+
+
+14. Image Background
+
+```jsx
+<ImageBackground source={...} style={{width: '100%', height: '100%'}}>
+    <Text>Inside</Text>
+</ImageBackground>
+```
+
+15. How to handle the touch
+
+```jsx
+    <Button onPress={onPress} title="This looks great!" />
+    <Button onPress={onPress} title="OK!" color="#841584" />
+```
+16. Touch able opacity
+```jsx
+  <TouchableOpacity onPress={onPressButton}>
+        <View style={styles.button}>
+          <Text style={styles.buttonText}>TouchableOpacity</Text>
+        </View>
+      </TouchableOpacity>
+```
+16. How to take the key from the FlatList
+
+```jsx
+  <View style={{flex: 1, padding: 24}}>
+      {isLoading ? (
+        <ActivityIndicator />
+      ) : (
+        <FlatList
+          data={data}
+          keyExtractor={({id}) => id}
+          renderItem={({item}) => (
+            <Text>
+              {item.title}, {item.releaseYear}
+            </Text>
+          )}
+        />
+      )}
+    </View>
+```
+17. WebSocket Support
+```jsx
+const ws = new WebSocket('ws://host.com/path');
+
+ws.onopen = () => {
+  // connection opened
+  ws.send('something'); // send a message
+};
+
+ws.onmessage = e => {
+  // a message was received
+  console.log(e.data);
+};
+
+ws.onerror = e => {
+  // an error occurred
+  console.log(e.message);
+};
+
+ws.onclose = e => {
+  // connection closed
+  console.log(e.code, e.reason);
+};
+```
