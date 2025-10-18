@@ -145,4 +145,43 @@ const Component = Platform.select({
 })();
 
 <Component />;
+
+// detecting the platform
+
+// in android
+import { Platform } from 'react-native';
+
+if (Platform.Version === 25) {
+  console.log('Running on Nougat!');
+}
+
+// in the ios
+import { Platform } from 'react-native';
+
+const majorVersionIOS = parseInt(Platform.Version, 10);
+if (majorVersionIOS <= 9) {
+  console.log('Work around a change in behavior');
+}
+
+//same coponent but
+BigButton.ios.js;
+BigButton.android.js;
+
+//working same
+import BigButton from './BigButton';
+
+
+Container.js # picked up by webpack, Rollup or any other Web bundler
+Container.native.js # picked up by the React Native bundler for both Android and iOS (Metro)
+```
+
+10. How to difine the prop in the React Native
+
+```jsx 
+type PreviewLayoutProps = PropsWithChildren<{
+  label: string;
+  values: string[];
+  selectedValue: string;
+  setSelectedValue: (value: string) => void;
+}>;
 ```
