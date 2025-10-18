@@ -56,14 +56,36 @@ export const style = StyleSheet.create({
         placeholder="Enter you text here..."
     />
 ```
-6. How to crate the scroll able content 
+
+6. How to crate the scroll able content
+
 ```jsx
-  <ScrollView>
-    <Text style={{fontSize: 96}}>Scroll me plz</Text>
-    <Image source={logo} />
-    <Image source={logo} />
-    <Image source={logo} />
-    <Image source={logo} />
-    <Image source={logo} />
-  </ScrollView>
+<ScrollView>
+  <Text style={{ fontSize: 96 }}>Scroll me plz</Text>
+  <Image source={logo} />
+  <Image source={logo} />
+  <Image source={logo} />
+  <Image source={logo} />
+  <Image source={logo} />
+</ScrollView>
+```
+
+7. How to map Array
+
+```jsx
+<FlatList
+  data={[
+    { key: 'Devin' },
+    { key: 'Dan' },
+    { key: 'Dominic' },
+    { key: 'Jackson' },
+    { key: 'James' },
+    { key: 'Joel' },
+    { key: 'John' },
+    { key: 'Jillian' },
+    { key: 'Jimmy' },
+    { key: 'Julie' },
+  ]}
+  renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
+/>
 ```
