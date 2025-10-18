@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { StatusBar, StyleSheet, Text, View } from 'react-native';
-
+import ImageComponent from './components/Image';
 export class App extends Component {
   render() {
     return (
       <>
         <StatusBar backgroundColor="#4CAF50" barStyle="dark-content" />
-        <View style={style.container}>
-          <Text style={style.container}> changed</Text>
-        </View>
+        <ImageComponent />
       </>
     );
   }

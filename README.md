@@ -13,14 +13,16 @@ export const style = StyleSheet.create({
   },
 });
 ```
-2. How to change the status bar colour 
+
+2. How to change the status bar colour
+
 ```jsx
 <StatusBar backgroundColor="#4CAF50" barStyle="dark-content" />
 ```
 
-
 3. How to give the text colour
-```jsx 
+
+```jsx
 export const style = StyleSheet.create({
   container: {
     backgroundColor: 'black',
@@ -30,4 +32,15 @@ export const style = StyleSheet.create({
     alignItems: 'center',
   },
 });
+```
+
+4. How to Image in the React Native
+
+```jsx
+<Image
+  source={{
+    uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
+  }}
+  style={{ width: 200, height: 200 }}
+/>
 ```
