@@ -304,8 +304,10 @@ const icon = this.props.active
   : require('./my-icon-inactive.png');
 <Image source={icon} />;
 ```
-13. Get Image from the network call 
-```jsx 
+
+13. Get Image from the network call
+
+```jsx
 <Image
   source={{
     uri: 'https://reactjs.org/logo-og.png',
@@ -315,7 +317,21 @@ const icon = this.props.active
     },
     body: 'Your Body goes here',
   }}
-  style={{width: 400, height: 400}}
+  style={{ width: 400, height: 400 }}
 />
+```
 
+14. Image Background
+
+```jsx
+<ImageBackground source={...} style={{width: '100%', height: '100%'}}>
+    <Text>Inside</Text>
+</ImageBackground>
+```
+
+15. How to handle the touch
+
+```jsx
+    <Button onPress={onPress} title="This looks great!" />
+    <Button onPress={onPress} title="OK!" color="#841584" />
 ```
