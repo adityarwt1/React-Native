@@ -2,10 +2,10 @@ import { Text, View, TextInput } from 'react-native';
 import React, { useState } from 'react';
 
 const TextInputComponet = () => {
-    return (
-        <>
+  const [text, setText] = useState<string>();
+  return (
+    <>
       <View>
-        const [text, setText] = useState<string>();
         <TextInput
           onChangeText={text => setText(text)}
           defaultValue={text}

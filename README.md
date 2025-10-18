@@ -56,3 +56,14 @@ export const style = StyleSheet.create({
         placeholder="Enter you text here..."
     />
 ```
+6. How to crate the scroll able content 
+```jsx
+  <ScrollView>
+    <Text style={{fontSize: 96}}>Scroll me plz</Text>
+    <Image source={logo} />
+    <Image source={logo} />
+    <Image source={logo} />
+    <Image source={logo} />
+    <Image source={logo} />
+  </ScrollView>
+```
