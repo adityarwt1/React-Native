@@ -44,3 +44,15 @@ export const style = StyleSheet.create({
   style={{ width: 200, height: 200 }}
 />
 ```
+
+5. How to take input in the React Native
+
+```jsx
+ const [text, setText] = useState<string>();
+
+    <TextInput
+        onChangeText={text => setText(text)}
+        defaultValue={text}
+        placeholder="Enter you text here..."
+    />
+```
