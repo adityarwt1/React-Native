@@ -137,4 +137,12 @@ const styles = StyleSheet.create({
     }),
   },
 });
+
+//for the component level platform build
+const Component = Platform.select({
+  ios: () => require('ComponentIOS'),
+  android: () => require('ComponentAndroid'),
+})();
+
+<Component />;
 ```
