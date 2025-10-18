@@ -89,3 +89,22 @@ export const style = StyleSheet.create({
   renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
 />
 ```
+
+8. Two Array
+
+```jsx
+<SectionList
+  sections={[
+    { title: 'D', data: ['Devin', 'Dan', 'Dominic'] },
+    {
+      title: 'J',
+      data: ['Jackson', 'James', 'Jillian', 'Jimmy', 'Joel', 'John', 'Julie'],
+    },
+  ]}
+  renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
+  renderSectionHeader={({ section }) => (
+    <Text style={styles.sectionHeader}>{section.title}</Text>
+  )}
+  keyExtractor={item => `basicListEntry-${item}`}
+/>
+```
