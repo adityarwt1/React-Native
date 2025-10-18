@@ -295,3 +295,27 @@ const styles = StyleSheet.create({
 
 export default RowGapAndColumnGap;
 ```
+
+12. How to take the take the image from the directory
+
+```jsx
+const icon = this.props.active
+  ? require('./my-icon-active.png')
+  : require('./my-icon-inactive.png');
+<Image source={icon} />;
+```
+13. Get Image from the network call 
+```jsx 
+<Image
+  source={{
+    uri: 'https://reactjs.org/logo-og.png',
+    method: 'POST',
+    headers: {
+      Pragma: 'no-cache',
+    },
+    body: 'Your Body goes here',
+  }}
+  style={{width: 400, height: 400}}
+/>
+
+```
