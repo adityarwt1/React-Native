@@ -343,3 +343,22 @@ const icon = this.props.active
         </View>
       </TouchableOpacity>
 ```
+16. How to take the key from the FlatList
+
+```jsx
+  <View style={{flex: 1, padding: 24}}>
+      {isLoading ? (
+        <ActivityIndicator />
+      ) : (
+        <FlatList
+          data={data}
+          keyExtractor={({id}) => id}
+          renderItem={({item}) => (
+            <Text>
+              {item.title}, {item.releaseYear}
+            </Text>
+          )}
+        />
+      )}
+    </View>
+```
