@@ -108,3 +108,33 @@ export const style = StyleSheet.create({
   keyExtractor={item => `basicListEntry-${item}`}
 />
 ```
+
+9.  Platform Specific Code
+
+```jsx
+import { Platform, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  height: Platform.OS === 'ios' ? 200 : 100,
+});
+
+import { Platform, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    ...Platform.select({
+      ios: {
+        backgroundColor: 'red',
+      },
+      android: {
+        backgroundColor: 'green',
+      },
+      default: {
+        // other platforms, web for example
+        backgroundColor: 'blue',
+      },
+    }),
+  },
+});
+```
